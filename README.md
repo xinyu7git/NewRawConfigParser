@@ -1,7 +1,7 @@
 NewRawConfigParser
 ==================
 
-重写了Python ConfigParser类中的RawConfigParser类，支持保留原配置文件中注释信息，支持添加新option到section最后，支持格式化输出option及value以实现“=”对齐。
+本代码重写了Python ConfigParser类中的RawConfigParser类，支持保留原配置文件中注释信息，支持添加新option到section最后，支持格式化输出option及value以实现“=”对齐。
 
 使用方法：
 git clone https://github.com/xinyu7git/NewRawConfigParser.git 到自己code目录。
@@ -15,7 +15,7 @@ git clone https://github.com/xinyu7git/NewRawConfigParser.git 到自己code目�
 4.新支持一个参数new_option_len，默认不用输入，该参数用来控制option与“=”之间的距离，用以保证“=”对齐。
 
 代码对比：
-1.新添加一个列表self._data保存配置文件的各行信息，每行以字符串的形式存在该列表中，从第一行到最后一行，按顺序存储。
+1.新添加一个列表self._data 保存配置文件的各行信息，每行以字符串的形式存在该列表中，从第一行到最后一行，按顺序存储。
 2.新添加一个字典self._location 保存所有section 及option 与self._data 的对应关系，key值为section或section+option，value为该setion或option在self_data中是索引位置。
 3.新添加一个遍历new_option_len ,用户可以自定义输入，该参数用来控制option与“=”之间的距离，用以保证“=”对齐，仅仅起到美观的作用，默认为1，当该值小于option本身的长度时，option与“=”之间会自动保留一个空格。
 
