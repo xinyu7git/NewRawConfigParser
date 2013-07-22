@@ -162,7 +162,7 @@ class NewRawConfigParser(RawConfigParser):
         if add:
             section_index = self._location[section]
             next_section_index = len(self._data)
-            print section_index,next_section_index
+            
             # find insert place ,insert new option to the end of its section
             for k,v in self._location.items():
                 if k in self._sections or k == DEFAULTSECT:
