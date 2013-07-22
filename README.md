@@ -9,7 +9,6 @@ git clone https://github.com/xinyu7git/NewRawConfigParser.git 到自己code目�
 支持环境：
 1.代码中使用了OrderedDict作为_default_dict 类型，既from collections import OrderedDict as _default_dict ，故collections包中必须包含OrderedDict，否则无法使用。
 （是由于本代码中引入了记录数据位置的self._location字典，set方法中会通过顺序遍历该字典，故该字典必须按照value值排序，所以使用了OrderedDict，当然若没有OrderedDict方法，可以自行改写set函数，通过排序的方式获取所需的localtion_index值。
-
 2.Python环境需要包含re及原ConfigParser包。
 3.支持原ConfigParser的allow_no_value方法，允许配置文件中option的value为空。
 4.新支持一个参数new_option_len，默认不用输入，该参数用来控制option与“=”之间的距离，用以保证“=”对齐。
