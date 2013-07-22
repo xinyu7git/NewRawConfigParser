@@ -17,6 +17,7 @@ git clone https://github.com/xinyu7git/NewRawConfigParser.git 到自己code目�
 1.新添加一个列表self._data 保存配置文件的各行信息，每行以字符串的形式存在该列表中，从第一行到最后一行，按顺序存储。
 2.新添加一个字典self._location 保存所有section 及option 与self._data 的对应关系，key值为section或section+option，value为该setion或option在self_data中是索引位置。
 3.新添加一个遍历new_option_len ,用户可以自定义输入，该参数用来控制option与“=”之间的距离，用以保证“=”对齐，仅仅起到美观的作用，默认为1，当该值小于option本身的长度时，option与“=”之间会自动保留一个空格。
+4.保留原ConfigParser中作者不支持以rem开头的option（rem 在某些环境下为注释的作用）
 
 重写函数：
 1.def _read(self, fp, fpname):
