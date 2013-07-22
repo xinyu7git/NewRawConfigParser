@@ -5,17 +5,17 @@
 
 # The MySQL server
 [mysqld]
-port                    		= 4444
-user                    		= xinyu7
+port                    		= hello
+user                    		= world
 
-server-id                       = 112114444
-log-bin                         = mysql-bin
-relay-log                       = relay-bin
-log-error                       = error.log
-skip-grant-tables				= 1
+server-id                       = hello
+log-bin                         = world
+relay-log                       = hello
+log-error                       = world
+skip-grant-tables				
 
 [myisamchk]
-key_buffer                      = 64M
-sort_buffer_size                = 32M
-read_buffer                     = 16M
-write_buffer                    = 16M
+key_buffer                      = 1
+sort_buffer_size                = 2
+read_buffer                     = 3
+write_buffer                    = 4
