@@ -32,3 +32,23 @@ git clone https://github.com/xinyu7git/NewRawConfigParser.git 到自己code目�
 支持原有功能，删除option的时候，需要修改self._location及self._data。
 6.def remove_section(self,section):
 支持原有功能，删除section的时候，循环删除该section下的所有option，最后删除该section自己。
+
+使用方法：
+（见a.py脚本，以a.cnf为配置文件）
+import os
+import sys
+
+os.chdir(sys.path[0])
+sys.path.append("./")
+
+from NewRawConfigParser import *
+
+config = NewRawConfigParser(allow_no_value=True,new_option_len=33)
+
+config.read("a.cnf")
+
+print config.get("mysqld","user")
+config.set("mysqld","user","xinyu7")
+
+with open("a.cnf",'wb') as configfile:
+    config.write(configfile)
