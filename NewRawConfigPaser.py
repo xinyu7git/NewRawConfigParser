@@ -9,7 +9,7 @@ from collections import OrderedDict as _default_dict
 
 import re
 
-DEFAULTSECT = "mysqld"
+DEFAULTSECT = "DEFAULT"
 
 class NewRawConfigParser(RawConfigParser):
     """docstring for MySQLConfigParser"""
