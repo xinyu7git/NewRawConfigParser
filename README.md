@@ -7,6 +7,7 @@ NewRawConfigParser
 git clone https://github.com/xinyu7git/NewRawConfigParser.git 到自己code目录。
 
 支持环境：
+********需要Python2.7版本支持，主要使用2.7版本的collections及configparser包*****************
 1.代码中使用了OrderedDict作为_default_dict 类型，既from collections import OrderedDict as _default_dict ，故collections包中必须包含OrderedDict，否则无法使用。
 （是由于本代码中引入了记录数据位置的self._location字典，set方法中会通过顺序遍历该字典，故该字典必须按照value值排序，所以使用了OrderedDict，当然若没有OrderedDict方法，可以自行改写set函数，通过排序的方式获取所需的localtion_index值。
 2.Python环境需要包含re及原ConfigParser包。
